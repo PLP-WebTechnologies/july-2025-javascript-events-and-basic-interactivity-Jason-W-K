@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Web Playground</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-mode">
+  <header>
+    <h1>Welcome to the Interactive Playground 🎮</h1>
+    <button id="themeToggle">🌞 Toggle Theme</button>
+  </header>
+
+  <main>
+    <!-- Counter Game -->
+    <section class="counter-section">
+      <h2>🔥 Click Counter Challenge</h2>
+      <p id="counterMessage">Ready to click?</p>
+      <button id="counterBtn">Click Me!</button>
+      <button id="resetBtn">Reset</button>
+      <p>Clicks: <span id="clickCount">0</span></p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h2>❓ Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <button class="faq-question">What is this site about?</button>
+        <div class="faq-answer">It's a showcase of interactive JavaScript magic!</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How does the counter work?</button>
+        <div class="faq-answer">Each click increments a counter and triggers messages.</div>
+      </div>
+    </section>
+
+    <!-- Tabbed Interface -->
+    <section class="tabs-section">
+      <h2>🗂️ Explore Tabs</h2>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+        <button class="tab-btn" data-tab="tab2">Tab 2</button>
+        <button class="tab-btn" data-tab="tab3">Tab 3</button>
+      </div>
+      <div class="tab-content" id="tab1">Welcome to Tab 1!</div>
+      <div class="tab-content hidden" id="tab2">This is Tab 2 content.</div>
+      <div class="tab-content hidden" id="tab3">You're now viewing Tab 3.</div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <h2>📋 Sign Up Form</h2>
+      <form id="signupForm" novalidate>
+        <label>Name: <input type="text" id="name" /></label>
+        <span class="error" id="nameError"></span>
+
+        <label>Email: <input type="email" id="email" /></label>
+        <span class="error" id="emailError"></span>
+
+        <label>Password: <input type="password" id="password" /></label>
+        <span class="error" id="passwordError"></span>
+
+        <button type="submit">Submit</button>
+        <p id="formMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
